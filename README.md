@@ -24,3 +24,23 @@ or
     sudo systemctl enable ssh
     sudo ufw allow ssh
     sudo systemctl status ssh
+
+## Webmin
+    sudo apt update && sudo apt upgrade
+    sudo apt install software-properties-common apt-transport-https
+    sudo wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib"
+    sudo apt install webmin
+    sudo systemctl status webmin
+    dpkg -l | grep webmin
+    sudo ufw allow 10000/tcp
+    sudo ufw reload
+    sudo ufw status
+
+Webmin set password
+
+    sudo /usr/share/webmin/changepass.pl /etc/webmin root [new password]
+
+https://[your server's IP]:10000/
+
+refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
