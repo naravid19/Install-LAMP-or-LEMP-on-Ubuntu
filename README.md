@@ -36,6 +36,9 @@ or
     sudo ufw allow 10000/tcp
     sudo ufw reload
     sudo ufw status
+or
+
+    sudo apt update && sudo apt upgrade && sudo apt install software-properties-common apt-transport-https && sudo wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib" && sudo apt install webmin && sudo systemctl status webmin && dpkg -l | grep webmin && sudo ufw allow 10000/tcp && sudo ufw reload && sudo ufw status
 
 Webmin set password
 
