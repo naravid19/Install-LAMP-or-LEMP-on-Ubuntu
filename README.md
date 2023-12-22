@@ -25,11 +25,12 @@ shortcut
 ## Installing ssh in Ubuntu
     sudo apt-get install openssh-client
     sudo systemctl enable ssh
+    sudo ufw enable
     sudo ufw allow ssh
     sudo systemctl status ssh
 shortcut
 
-    sudo apt-get install openssh-client && sudo systemctl enable ssh && sudo ufw allow ssh && sudo systemctl status ssh
+    sudo apt-get install openssh-client && sudo systemctl enable ssh && sudo ufw enable && sudo ufw allow ssh && sudo systemctl status ssh
 
 ## Webmin
     sudo apt update && sudo apt upgrade
