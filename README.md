@@ -6,6 +6,9 @@ or
 
     sudo apt-get update && sudo apt-get upgrade
 
+## Create a user account
+    sudo adduser username
+
 ## Tools
     sudo apt install fish -y
     sudo apt install net-tools -y
