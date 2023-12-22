@@ -15,3 +15,9 @@ or
     sudo apt install ubuntu-desktop -y
     sudo systemctl start lightdm.service
     sudo service lightdm start
+
+## Installing ssh in Ubuntu
+    sudo apt-get install openssh-client
+    sudo systemctl enable ssh
+    sudo ufw allow ssh
+    sudo systemctl status ssh
