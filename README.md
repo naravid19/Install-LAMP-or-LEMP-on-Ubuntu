@@ -1,6 +1,6 @@
 ## Linux lab
 install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
-- [Basic command](#Basic command)
+
 ## Basic command
     sudo apt update && sudo apt upgrade
     sudo apt-get update && sudo apt-get upgrade
@@ -93,8 +93,9 @@ Reload the grant tables in the MySQL database so that the changes can be applied
 MySQL and change the root user’s authentication method back to the default, auth_socket. To authenticate as the root MySQL user using a password, run this command:
 
     mysql -u root -p
-    ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
-
+'''bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+'''
 refer : https://linuxhint.com/install-mysql-on-ubuntu-22-04/, https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
 
 ## Installing PHP
