@@ -1,6 +1,17 @@
 ## Linux lab
 install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
+
 - [Basic command](#Basic-command)
+- [Firewall](#Firewall)
+- [Create a user account](#create-a-user-account)
+- [Tools](#tools)
+- [Installing GUI](#installing-gui)
+- [Installing ssh in Ubuntu](#installing-ssh-in-ubuntu)
+- [Installing Webmin](#installing-webmin)
+- [Installing Apache Web Server](#installing-apache-web-server)
+- [Installing MySQL](#installing-mysql)
+- [Installing PHP](#installing-php)
+- [Installing phpMyAdmin](#installing-phpmyadmin)
 
 ## Basic command
     sudo apt update && sudo apt upgrade
