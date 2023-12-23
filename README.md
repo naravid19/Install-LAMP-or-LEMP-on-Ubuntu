@@ -11,6 +11,9 @@ Ubuntu install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
 - [Installing Apache Web Server](#installing-apache-web-server)
 - [Installing MySQL](#installing-mysql)
 - [Installing PHP](#installing-php)
+    - [PHP 8.1](#php-81)
+    - [PHP 8.2](#php-82)
+    - [PHP 8.3](#php-83)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
 
 ## Basic command
@@ -115,10 +118,30 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
 refer : https://linuxhint.com/install-mysql-on-ubuntu-22-04/, https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
 
 ## Installing PHP
+### PHP 8.1
     sudo apt install php libapache2-mod-php php-mysql
     php -v
 
 refer : https://nst-green.name/lamp-%E0%B8%9A%E0%B8%99-ubuntu-22-04-lts/
+
+### PHP 8.2
+    sudo apt update && apt upgrade -y
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt-get update
+    sudo apt install php8.2 -y
+    php --version
+
+refer : https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
+
+### PHP 8.3
+    sudo apt update && sudo apt upgrade -y
+    sudo apt-get install ca-certificates apt-transport-https software-properties-common
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt-get update
+    sudo apt-get install php8.3
+    sudo php8.3 --version
+
+refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
 
 ## Installing phpMyAdmin
     sudo apt update && sudo apt upgrade
