@@ -1,5 +1,5 @@
-## Linux lab
-install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
+## Ubuntu Linux install LAMP
+Ubuntu install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
 
 - [Basic command](#Basic-command)
 - [Firewall](#Firewall)
