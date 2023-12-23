@@ -1,5 +1,6 @@
 ## Linux lab
 install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
+- [Basic command](## Basic command)
 
 ## Basic command
     sudo apt update && sudo apt upgrade
@@ -166,4 +167,4 @@ You can now access the web interface by visiting your server’s domain name or 
 
     https://localhost/phpmyadmin
 
-refer : `https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-22-04#configuring-password-access-for-a-dedicated-mysql-user`
+refer : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-22-04#configuring-password-access-for-a-dedicated-mysql-user
