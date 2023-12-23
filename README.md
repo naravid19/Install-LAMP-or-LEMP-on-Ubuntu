@@ -83,19 +83,23 @@ refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apac
     sudo mysql
 
 set the root password
-
-    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123#@!';
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123#@!';
+```
 
 Reload the grant tables in the MySQL database so that the changes can be applied without restarting the “mysql” service:
-
-    FLUSH PRIVILEGES;
+```bash
+FLUSH PRIVILEGES;
+```
 
 MySQL and change the root user’s authentication method back to the default, auth_socket. To authenticate as the root MySQL user using a password, run this command:
 
-    mysql -u root -p
+    sudo mysql -u root -p
+
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
 ```
+
 refer : https://linuxhint.com/install-mysql-on-ubuntu-22-04/, https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
 
 ## Installing PHP
@@ -107,27 +111,56 @@ refer : https://nst-green.name/lamp-%E0%B8%9A%E0%B8%99-ubuntu-22-04-lts/
 ## Installing phpMyAdmin
     sudo apt update && sudo apt upgrade
     sudo mysql
-    UNINSTALL COMPONENT "file://component_validate_password";
-    exit
+
+```bash
+UNINSTALL COMPONENT "file://component_validate_password";
+```
+
+```bash
+exit
+```
+
     sudo apt install phpmyadmin
     sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
-    INSTALL COMPONENT "file://component_validate_password";
+
+```bash
+INSTALL COMPONENT "file://component_validate_password";
+```
+
     sudo phpenmod mbstring
     sudo systemctl restart apache2
 
 Configuring Password Access for the MySQL Root Account
 
     sudo mysql
-    SELECT user,authentication_string,plugin,host FROM mysql.user;
-    ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
-    SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+```bash
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
+
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
+```
+
+```bash
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
 
 Configuring Password Access for a Dedicated MySQL User
 
     sudo mysql
-    CREATE USER 'sammy'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
-    GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+
+```bash
+CREATE USER 'sammy'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
+```
+
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+```
+
+```bash
     exit
+```
 
 You can now access the web interface by visiting your server’s domain name or public IP address followed by /phpmyadmin:
 
