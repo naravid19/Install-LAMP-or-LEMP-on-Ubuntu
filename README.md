@@ -1,5 +1,6 @@
-# Linux
-Linux lab
+## Linux lab
+install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
+
 ## Basic command
     sudo apt update && sudo apt upgrade
     sudo apt-get update && sudo apt-get upgrade
@@ -16,6 +17,7 @@ Linux lab
     sudo apt install net-tools -y
 
 shortcut
+
     sudo apt install fish -y && sudo apt install net-tools -y
 
 ## Installing GUI
@@ -33,7 +35,7 @@ shortcut
 
 shortcut
 
-    sudo apt-get install openssh-client && sudo systemctl enable ssh && sudo ufw enable && sudo ufw allow ssh && sudo systemctl status ssh
+    sudo apt-get install openssh-client && sudo systemctl enable ssh && sudo ufw enable && sudo ufw allow ssh
 
 ## Installing Webmin
     sudo apt update && sudo apt upgrade
@@ -49,7 +51,7 @@ shortcut
 
 shortcut
 
-    sudo apt update && sudo apt upgrade && sudo apt install software-properties-common apt-transport-https && sudo wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib" && sudo apt install webmin && sudo systemctl status webmin && dpkg -l | grep webmin && sudo ufw allow 10000/tcp && sudo ufw reload && sudo ufw status
+    sudo apt update && sudo apt upgrade && sudo apt install software-properties-common apt-transport-https && sudo wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib" && sudo apt install webmin && sudo systemctl status webmin && dpkg -l | grep webmin && sudo ufw allow 10000/tcp && sudo ufw reload
 
 Webmin set password
 
@@ -67,6 +69,10 @@ refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
     sudo ufw allow 'Apache'
     sudo ufw status
     sudo systemctl status apache2
+
+shortcut
+
+    sudo apt update && sudo apt upgrade && sudo apt install apache2 && sudo ufw allow 'Apache'
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
 
