@@ -1,6 +1,6 @@
 ## Linux lab
 install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
-- [Basic command](## Basic command)
+- [Basic command](#Basic command)
 
 ## Basic command
     sudo apt update && sudo apt upgrade
