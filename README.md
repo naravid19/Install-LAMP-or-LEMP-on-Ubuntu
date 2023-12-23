@@ -93,7 +93,7 @@ Reload the grant tables in the MySQL database so that the changes can be applied
 MySQL and change the root user’s authentication method back to the default, auth_socket. To authenticate as the root MySQL user using a password, run this command:
 
     mysql -u root -p
-mysql >'''bash
+'''bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
 '''
 refer : https://linuxhint.com/install-mysql-on-ubuntu-22-04/, https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
