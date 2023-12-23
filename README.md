@@ -57,6 +57,7 @@ Webmin set password
 
 https://[your server's IP]:10000/
 
+
 refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
 
 ## Installing Apache Web Server
