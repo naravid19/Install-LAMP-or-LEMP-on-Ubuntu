@@ -76,7 +76,7 @@ Webmin set password
 
     sudo /usr/share/webmin/changepass.pl /etc/webmin root [new password]
 
-https://[your server's IP]:10000/
+https://localhost:10000/
 
 
 refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
