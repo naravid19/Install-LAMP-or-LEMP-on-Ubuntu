@@ -4,7 +4,11 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 
 - [Ubuntu Linux install LAMP or LEMP](#ubuntu-linux-install-lamp-or-lemp)
 - [Basic command](#basic-command)
-- [Firewall](#firewall)
+- [Firewall with UFW](#firewall-with-ufw)
+  - [Enabling UFW](#enabling-ufw)
+  - [Allowing UFW](#allowing-ufw)
+  - [Denying Connections](#denying-connections)
+  - [Status of UFW](#status-of-ufw)
 - [Create a user account](#create-a-user-account)
 - [Tools](#tools)
 - [Installing ssh in Ubuntu](#installing-ssh-in-ubuntu)
@@ -25,9 +29,37 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
     sudo apt update && sudo apt upgrade
     sudo apt-get update && sudo apt-get upgrade
 
-## Firewall
+## Firewall with UFW
+
+### Enabling UFW
+    sudo ufw enable
+
+### Allowing UFW
+    sudo ufw allow ssh
+
+or port
+
+    sudo ufw allow 22
+
+### Denying Connections
+    sudo ufw deny http
+
+or use number : ```bashsudo ufw status numbered```
+
+    sudo ufw delete 2
+
+or Actual Rule
+
+    sudo ufw delete allow http
+    sudo ufw delete allow 80
+
+### Status of UFW
+    sudo ufw status numbered
     sudo ufw app list
     sudo ufw status
+    sudo ufw status verbose
+
+    refer : https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04#step-3-allowing-ssh-connections
 
 ## Create a user account
     sudo adduser username
