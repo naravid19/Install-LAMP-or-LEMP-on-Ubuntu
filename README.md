@@ -12,6 +12,7 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 - [Installing Webmin](#installing-webmin)
 - [Installing MySQL](#installing-mysql)
 - [Installing PHP](#installing-php)
+  - [CAVEATS:](#caveats)
   - [PHP 8.1](#php-81)
   - [PHP 8.2](#php-82)
   - [PHP 8.3](#php-83)
@@ -113,6 +114,13 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04, https://linuxhint.com/install-mysql-on-ubuntu-22-04/, https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
 
 ## Installing PHP
+
+### CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
 ### PHP 8.1
     sudo apt install php libapache2-mod-php php-mysql
     php -v
