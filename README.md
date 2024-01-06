@@ -44,7 +44,7 @@ or port
 ### Denying Connections
     sudo ufw deny http
 
-or use number : ```bashsudo ufw status numbered```
+or use number : ```bash sudo ufw status numbered```
 
     sudo ufw delete 2
 
