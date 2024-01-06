@@ -23,8 +23,10 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
   - [PHP 8.1](#php-81)
   - [PHP 8.2](#php-82)
   - [PHP 8.3](#php-83)
+  - [Config Nginx](#config-nginx)
   - [Test PHP](#test-php)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
+  - [phpMyAdmin for Nginx](#phpmyadmin-for-nginx)
 
 ## Basic command
     sudo apt update && sudo apt upgrade
@@ -219,6 +221,12 @@ refer : https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
 
 refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
 
+### Config Nginx
+    sudo nano /etc/nginx/sites-enabled/default
+    add index.php and change php7.4-fpm -> php8.2-fpm
+    sudo nginx -t
+    sudo service nginx restart
+
 ### Test PHP
     sudo nano /var/www/html/info.php
     <?php phpinfo(); ?>
@@ -279,8 +287,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
     exit
 ```
 
+### phpMyAdmin for Nginx
+    sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
 You can now access the web interface by visiting your server’s domain name or public IP address followed by /phpmyadmin:
 
 http://localhost/phpmyadmin
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-22-04#configuring-password-access-for-a-dedicated-mysql-user
+
+refer : https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
