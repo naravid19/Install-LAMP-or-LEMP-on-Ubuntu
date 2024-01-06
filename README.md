@@ -14,6 +14,9 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 - [Installing ssh in Ubuntu](#installing-ssh-in-ubuntu)
 - [Installing GUI](#installing-gui)
 - [Installing Webmin](#installing-webmin)
+- [Installing Apache Web Server](#installing-apache-web-server)
+- [Installing Nginx](#installing-nginx)
+  - [Fix Permission](#fix-permission)
 - [Installing MySQL](#installing-mysql)
 - [Installing PHP](#installing-php)
   - [CAVEATS:](#caveats)
@@ -21,8 +24,6 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
   - [PHP 8.2](#php-82)
   - [PHP 8.3](#php-83)
   - [Test PHP](#test-php)
-- [Installing Apache Web Server](#installing-apache-web-server)
-- [Installing Nginx](#installing-nginx)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
 
 ## Basic command
@@ -114,6 +115,46 @@ https://localhost:10000/
 
 refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
 
+## Installing Apache Web Server
+    sudo apt update && sudo apt upgrade
+    sudo apt install apache2
+    sudo ufw app list
+    sudo ufw allow 'Apache'
+    sudo ufw status
+    sudo systemctl status apache2
+
+shortcut
+
+    sudo apt update && sudo apt upgrade && sudo apt install apache2 && sudo ufw allow 'Apache'
+
+refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
+
+## Installing Nginx
+    sudo apt update
+    sudo apt install nginx
+    sudo ufw allow 'Nginx HTTP'
+    sudo ufw status
+
+Checking your Web Server
+
+    systemctl status nginx
+
+### Fix Permission
+    cd /var/www/html
+    ls -l
+    sudo chown -R admin:admin /var/www/html
+
+test
+
+    nano index.html
+```bash
+<!DOCTYPE html><html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>
+```
+
+refer : https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
+
+refer : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
+
 ## Installing MySQL
     sudo apt install mysql-server
     sudo mysql_secure_installation
@@ -183,32 +224,6 @@ refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
     <?php phpinfo(); ?>
 
 http://localhost/info.php
-
-## Installing Apache Web Server
-    sudo apt update && sudo apt upgrade
-    sudo apt install apache2
-    sudo ufw app list
-    sudo ufw allow 'Apache'
-    sudo ufw status
-    sudo systemctl status apache2
-
-shortcut
-
-    sudo apt update && sudo apt upgrade && sudo apt install apache2 && sudo ufw allow 'Apache'
-
-refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
-
-## Installing Nginx
-    sudo apt update
-    sudo apt install nginx
-    sudo ufw allow 'Nginx HTTP'
-    sudo ufw status
-
-Checking your Web Server
-
-    systemctl status nginx
-
-refer : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
 
 ## Installing phpMyAdmin
     sudo apt update && sudo apt upgrade
