@@ -225,6 +225,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 
 You can now access the web interface by visiting your server’s domain name or public IP address followed by /phpmyadmin:
 
-    https://localhost/phpmyadmin
+    http://localhost/phpmyadmin
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-22-04#configuring-password-access-for-a-dedicated-mysql-user
