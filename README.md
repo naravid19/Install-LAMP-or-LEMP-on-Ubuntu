@@ -1,19 +1,22 @@
-## Ubuntu Linux install LAMP
+## Ubuntu Linux install LAMP or LEMP
 Ubuntu install LAMP -> Apache Web Server, MySQL, PHP, phpmyadmin
+Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 
-- [Basic command](#Basic-command)
-- [Firewall](#Firewall)
+- [Ubuntu Linux install LAMP or LEMP](#ubuntu-linux-install-lamp-or-lemp)
+- [Basic command](#basic-command)
+- [Firewall](#firewall)
 - [Create a user account](#create-a-user-account)
 - [Tools](#tools)
 - [Installing GUI](#installing-gui)
 - [Installing ssh in Ubuntu](#installing-ssh-in-ubuntu)
 - [Installing Webmin](#installing-webmin)
-- [Installing Apache Web Server](#installing-apache-web-server)
 - [Installing MySQL](#installing-mysql)
 - [Installing PHP](#installing-php)
-    - [PHP 8.1](#php-81)
-    - [PHP 8.2](#php-82)
-    - [PHP 8.3](#php-83)
+  - [PHP 8.1](#php-81)
+  - [PHP 8.2](#php-82)
+  - [PHP 8.3](#php-83)
+- [Installing Apache Web Server](#installing-apache-web-server)
+- [Installing Nginx](#installing-nginx)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
 
 ## Basic command
@@ -77,20 +80,6 @@ https://[your server's IP]:10000/
 
 refer : https://phoenixnap.com/kb/install-webmin-on-ubuntu
 
-## Installing Apache Web Server
-    sudo apt update && sudo apt upgrade
-    sudo apt install apache2
-    sudo ufw app list
-    sudo ufw allow 'Apache'
-    sudo ufw status
-    sudo systemctl status apache2
-
-shortcut
-
-    sudo apt update && sudo apt upgrade && sudo apt install apache2 && sudo ufw allow 'Apache'
-
-refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
-
 ## Installing MySQL
     sudo apt install mysql-server
     sudo mysql_secure_installation
@@ -147,6 +136,32 @@ refer : https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
     sudo php8.3 --version
 
 refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
+
+## Installing Apache Web Server
+    sudo apt update && sudo apt upgrade
+    sudo apt install apache2
+    sudo ufw app list
+    sudo ufw allow 'Apache'
+    sudo ufw status
+    sudo systemctl status apache2
+
+shortcut
+
+    sudo apt update && sudo apt upgrade && sudo apt install apache2 && sudo ufw allow 'Apache'
+
+refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
+
+## Installing Nginx
+    sudo apt update
+    sudo apt install nginx
+    sudo ufw allow 'Nginx HTTP'
+    sudo ufw status
+
+Checking your Web Server
+
+    systemctl status nginx
+
+refer : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
 
 ## Installing phpMyAdmin
     sudo apt update && sudo apt upgrade
