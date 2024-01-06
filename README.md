@@ -142,6 +142,7 @@ refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
     sudo nano /var/www/html/info.php
     <?php phpinfo(); ?>
 
+http://localhost/info.php
 
 ## Installing Apache Web Server
     sudo apt update && sudo apt upgrade
