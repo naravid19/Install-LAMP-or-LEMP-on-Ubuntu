@@ -44,7 +44,7 @@ or port
 ### Denying Connections
     sudo ufw deny http
 
-or use number : ```bash sudo ufw status numbered```
+or use number : ```sudo ufw status numbered```
 
     sudo ufw delete 2
 
@@ -59,7 +59,7 @@ or Actual Rule
     sudo ufw status
     sudo ufw status verbose
 
-    refer : https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04#step-3-allowing-ssh-connections
+refer : https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04#step-3-allowing-ssh-connections
 
 ## Create a user account
     sudo adduser username
