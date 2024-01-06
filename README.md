@@ -15,6 +15,7 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
   - [PHP 8.1](#php-81)
   - [PHP 8.2](#php-82)
   - [PHP 8.3](#php-83)
+  - [Test PHP](#test-php)
 - [Installing Apache Web Server](#installing-apache-web-server)
 - [Installing Nginx](#installing-nginx)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
@@ -136,6 +137,11 @@ refer : https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
     sudo php8.3 --version
 
 refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
+
+### Test PHP
+     sudo nano /var/www/html/info.php
+    <?php phpinfo(); ?>
+
 
 ## Installing Apache Web Server
     sudo apt update && sudo apt upgrade
