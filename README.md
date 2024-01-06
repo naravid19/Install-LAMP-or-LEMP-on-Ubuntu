@@ -7,8 +7,8 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 - [Firewall](#firewall)
 - [Create a user account](#create-a-user-account)
 - [Tools](#tools)
-- [Installing GUI](#installing-gui)
 - [Installing ssh in Ubuntu](#installing-ssh-in-ubuntu)
+- [Installing GUI](#installing-gui)
 - [Installing Webmin](#installing-webmin)
 - [Installing MySQL](#installing-mysql)
 - [Installing PHP](#installing-php)
@@ -39,12 +39,6 @@ shortcut
 
     sudo apt install fish -y && sudo apt install net-tools -y
 
-## Installing GUI
-    sudo apt install lightdm -y
-    sudo apt install ubuntu-desktop -y
-    sudo systemctl start lightdm.service
-    sudo service lightdm start
-
 ## Installing ssh in Ubuntu
     sudo apt-get install openssh-client
     sudo systemctl enable ssh
@@ -55,6 +49,12 @@ shortcut
 shortcut
 
     sudo apt-get install openssh-client && sudo systemctl enable ssh && sudo ufw enable && sudo ufw allow ssh
+
+## Installing GUI
+    sudo apt install lightdm -y
+    sudo apt install ubuntu-desktop -y
+    sudo systemctl start lightdm.service
+    sudo service lightdm start
 
 ## Installing Webmin
     sudo apt update && sudo apt upgrade
@@ -139,7 +139,7 @@ refer : https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
 refer : https://www.linuxtuto.com/how-to-install-php-8-3-on-ubuntu-22-04/
 
 ### Test PHP
-     sudo nano /var/www/html/info.php
+    sudo nano /var/www/html/info.php
     <?php phpinfo(); ?>
 
 
