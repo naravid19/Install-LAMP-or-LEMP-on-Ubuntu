@@ -15,6 +15,7 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
 - [Installing GUI](#installing-gui)
 - [Installing Webmin](#installing-webmin)
 - [Installing Apache Web Server](#installing-apache-web-server)
+  - [Installing Apache Web Server for PHP8.2](#installing-apache-web-server-for-php82)
 - [Installing Nginx](#installing-nginx)
   - [Fix Permission](#fix-permission)
 - [Installing MySQL](#installing-mysql)
@@ -27,6 +28,7 @@ Ubuntu install LEMP -> Nginx, MySQL, PHP, phpmyadmin
   - [Test PHP](#test-php)
 - [Installing phpMyAdmin](#installing-phpmyadmin)
   - [phpMyAdmin for Nginx](#phpmyadmin-for-nginx)
+- [MySQL Workbench Installation](#mysql-workbench-installation)
 
 ## Basic command
     sudo apt update && sudo apt upgrade
@@ -131,6 +133,16 @@ shortcut
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
 
+### Installing Apache Web Server for PHP8.2
+    sudo add-apt-repository ppa:ondrej/apache2
+    sudo apt-get update
+    sudo apt-get install apache2
+    sudo ufw app list
+    sudo ufw allow 'Apache'
+    sudo ufw status
+    sudo systemctl status apache2
+    apache2 -v
+
 ## Installing Nginx
     sudo apt update
     sudo apt install nginx
@@ -153,7 +165,9 @@ test
 <!DOCTYPE html><html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>
 ```
 
-refer : https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
+refer nginx: https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
+
+refer nginx : https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-22-04
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
 
@@ -296,4 +310,10 @@ http://localhost/phpmyadmin
 
 refer : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-22-04#configuring-password-access-for-a-dedicated-mysql-user
 
-refer : https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
+refer nginx: https://karnyong.medium.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-lemp-stack-%E0%B8%9A%E0%B8%99-ubuntu-22-04-vm-%E0%B9%81%E0%B8%96%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-phpmyadmin-d589599f891a
+
+## MySQL Workbench Installation
+    sudo apt update
+    sudo snap install mysql-workbench-community
+
+refer : https://www.geeksforgeeks.org/how-to-install-mysql-workbench-on-ubuntu/
